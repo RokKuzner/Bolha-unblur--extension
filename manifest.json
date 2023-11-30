@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "BolhaUnblur+",
+    "version": "1.0",
+    "description": "This extension will unblur all inactive bolha adds.",
+    "author": "Rok Kuzner",
+    "icons": {
+        "512":"myicon.png"
+    },
+    "browser_action": {
+        "default_icon": "myicon.png",
+        "default_title": "BolhaUnblur+",
+        "default_popup": "myapp.html"
+    },
+    "background": {
+        "scripts":["main.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.bolha.com/",
+                "https://www.bolha.com/*"
+            ],
+            "js": ["injectior.js"]
+        }
+    ]
+}
