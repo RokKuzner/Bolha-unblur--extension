@@ -1,1 +1,1 @@
-This extension unblures bolha adds!
+This extension unblurs bolha adds!
