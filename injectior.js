@@ -33,9 +33,11 @@ chrome.runtime.onMessage.addListener((message) => {
         for (let thumbnail_image_div of thumbnail_image_divs) {
             //disply image when clicked
             if (count == 0) {
-                thumbnail_image_div.onclick = function() {showing_img.src = first_img_strc}
+                thumbnail_image_div.onclick = function() {
+                    showing_img.src = first_img_strc
+                    image_position_span.innerText = "1" + "/" + String(images.length)
+                }
                 thumbnail_image_div.classList.remove("is-active")
-                image_position_span.innerText = "1" + "/" + String(images.length)
             } else {
                 thumbnail_image_div.onclick = (function(currentCount) {
                     return function() {
