@@ -68,5 +68,9 @@ chrome.runtime.onMessage.addListener((message) => {
         wanted_buttons[0].parentNode.removeChild(wanted_buttons[0]);
         wanted_buttons[1].parentNode.removeChild(wanted_buttons[1]);
 
+        //Remove map
+        let add_map = document.querySelector(".ClassifiedDetailMap")
+        add_map.parentNode.removeChild(add_map)
+
     }
 })
