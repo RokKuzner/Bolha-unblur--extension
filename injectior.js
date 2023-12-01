@@ -27,16 +27,34 @@ chrome.runtime.onMessage.addListener((message) => {
         let images = document.querySelectorAll(".ClassifiedDetailGallery-slideImage")
         let showing_img = images[0]
         let first_img_strc = showing_img.src
+        let image_position_span = document.querySelector(".ClassifiedDetailGallery-marker--position span")
 
         let count = 0
         for (let thumbnail_image_div of thumbnail_image_divs) {
-            thumbnail_image_div.href
+            //disply image when clicked
             if (count == 0) {
-                thumbnail_image_div.href = first_img_strc
+                thumbnail_image_div.onclick = function() {showing_img.src = first_img_strc}
+                thumbnail_image_div.classList.remove("is-active")
+                image_position_span.innerText = "1" + "/" + String(images.length)
             } else {
-                thumbnail_image_div.href = images[count].dataset.src
+                thumbnail_image_div.onclick = (function(currentCount) {
+                    return function() {
+                      showing_img.src = images[currentCount].dataset["src"]
+                      image_position_span.innerText = String(currentCount+1) + "/" + String(images.length)
+                    };
+                  })(count);
             }
-            thumbnail_image_div.target = "_blank"
+            thumbnail_image_div.attributes.removeNamedItem("href")
+
+            //cursor pointer when hovered
+            thumbnail_image_div.onmouseover = function() {
+                thumbnail_image_div.style.cursor = "pointer";
+            };
+
+            thumbnail_image_div.onmouseout = function() {
+                thumbnail_image_div.style.cursor = "auto";
+            };
+
             count ++
         }
 
