@@ -6,6 +6,7 @@ It:
 * Contact the seller
 
 | Without extension | With extension |
+| - | - |
 | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/7.png) | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/8.png) |
 
 # Instalation
