@@ -1,9 +1,8 @@
 # Bolha unblur +
-Bolha unblur + extension unblurs bolha inactive Bolha adds.
-It:
-* Unblurs the inactive add's page
-* Allows you to still view add's images
-* Contact the seller
+Bolha unblur + extension unblurs bolha inactive Bolha adds. It:
+* unblurs the inactive add's page
+* allows you to view add's images and navigate through them
+* allows you to contact the seller
 
 | Without extension | With extension |
 | - | - |
