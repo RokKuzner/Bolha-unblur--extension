@@ -14,11 +14,11 @@ To install extension you first need to downoad the files. Go to code tab and pre
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/1.png)
 
-Then extract the source (I use WinRar software in the explenation) to the folder where it will be stored. For example "C:\Users\User\Documents\Extensions"
+Then extract the source code (I'm using WinRar software in the explenation) to the folder where it will be stored. For example "C:\Users\User\Documents\Extensions"
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/2.png)
 
-After the source code is extracted, go to your browser (I use Google Chrome in the explanation, but it will be simmilar for other browsers), click extensions button and then manage extensions.
+After the source code is extracted, go to your browser (I'm using Google Chrome in the explanation, but it will be simmilar for other browsers), click extensions button and then manage extensions.
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/3.png)
 
@@ -31,7 +31,7 @@ Click load unpacked and select the path to your extension's folder (the folder w
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/5.png)
 
 # Update extension
-Go to your browser (I use Google Chrome in the explanation, but it will be simmilar for other browsers), click extensions button and then manage extensions.
+Go to your browser (I'm using Google Chrome in the explanation, but it will be simmilar for other browsers), click extensions button and then manage extensions.
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/3.png)
 
