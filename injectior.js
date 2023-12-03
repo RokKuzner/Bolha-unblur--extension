@@ -68,6 +68,15 @@ chrome.runtime.onMessage.addListener((message) => {
         wanted_buttons[0].parentNode.removeChild(wanted_buttons[0]);
         wanted_buttons[1].parentNode.removeChild(wanted_buttons[1]);
 
+        //Send message to seller
+        let send_msg_btns = document.querySelectorAll(".js-veza-contact_seller")
+        for (let send_msg_btn of [send_msg_btns[0], send_msg_btns[1]]) {
+            let send_msg_btn_parent = send_msg_btn.parentNode
+
+            send_msg_btn_parent.removeChild(send_msg_btn)
+            send_msg_btn_parent.innerHTML = send_msg_btn_parent.innerHTML + '<a type="button" href="'+ send_msg_btn.dataset["href"] + '" class="ClassifiedDetailSummary-contactSellerAction ClassifiedDetailSummary-cta button-standard bp-radix__button-standard--full button-standard--gamma js-veza-contact_seller" role="link">Pošlji sporočilo</>'
+        }
+
         //Remove map
         let add_map = document.querySelector(".ClassifiedDetailMap")
         add_map.parentNode.removeChild(add_map)
