@@ -7,6 +7,7 @@ Bolha unblur + extension unblurs bolha inactive Bolha adds. It:
 | Without extension | With extension |
 | - | - |
 | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/7.png) | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/8.png) |
+| completely blured, can't view images, can't contact seller | unblured page, all images avalible to view, can click on the seller and send them a message |
 
 # Instalation
 To install extension you first need to downoad the files. Go to code tab and press download zip.
