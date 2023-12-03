@@ -78,8 +78,8 @@ chrome.runtime.onMessage.addListener((message) => {
         }
 
         //Remove map
-        let add_map = document.querySelector(".ClassifiedDetailMap")
-        add_map.parentNode.removeChild(add_map)
+        let ad_map = document.querySelector(".ClassifiedDetailMap")
+        ad_map.parentNode.removeChild(ad_map)
 
     }
 })
