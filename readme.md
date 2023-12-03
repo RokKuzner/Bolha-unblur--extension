@@ -5,6 +5,9 @@ It:
 * Allows you to still view add's images
 * Contact the seller
 
+| Without extension | With extension |
+| ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/7.png) | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/8.png) |
+
 # Instalation
 To install extension you first need to downoad the files. Go to code tab and press download zip.
 
