@@ -35,4 +35,4 @@ Then click remove under the BolhaUnblur+ extension.
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/6.png)
 
-Delete extension's source code from your comuter and the follow the [instalation](#instlation) process above.
+Delete extension's source code from your comuter and the follow the [instalation](#instalation) process above.
