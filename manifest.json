@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "BolhaUnblur+",
-    "version": "1.2.0",
+    "version": "1.2.5",
     "description": "This extension will unblur all inactive bolha ads.",
     "author": "Rok Kuzner",
     "icons": {
