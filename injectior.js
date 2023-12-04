@@ -61,12 +61,12 @@ chrome.runtime.onMessage.addListener((message) => {
         }
 
         //Left right buttons
-        let buttons = document.querySelectorAll("button");
-        let wanted_buttons = [];
-        for (let b of buttons) {if (b.title=="Naprej" || b.title=="Nazaj" ) {wanted_buttons.push(b)}}
+        let all_buttons = document.querySelectorAll("button");
+        let buttons_to_delete = [];
+        for (let b of all_buttons) {if (b.title=="Naprej" || b.title=="Nazaj" ) {buttons_to_delete.push(b)}}
 
-        wanted_buttons[0].parentNode.removeChild(wanted_buttons[0]);
-        wanted_buttons[1].parentNode.removeChild(wanted_buttons[1]);
+        buttons_to_delete[0].parentNode.removeChild(buttons_to_delete[0]);
+        buttons_to_delete[1].parentNode.removeChild(buttons_to_delete[1]);
 
         //Send message to seller
         let send_msg_btns = document.querySelectorAll(".js-veza-contact_seller")
