@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener((message) => {
+window.onload = function() {
     const wrap_content = document.querySelector('.wrap-main .wrap-content');
     const content_main= document.querySelector('.wrap-main .wrap-content .content-main');
     let blured = false
@@ -25,48 +25,50 @@ chrome.runtime.onMessage.addListener((message) => {
         //Images
         let thumbnail_image_divs = document.querySelectorAll(".MediaGalleryThumbs-itemControl")
         let images = document.querySelectorAll(".ClassifiedDetailGallery-slideImage")
-        let showing_img = images[0]
-        let first_img_strc = showing_img.src
-        let image_position_span = document.querySelector(".ClassifiedDetailGallery-marker--position span")
+        if (images.length > 0) {
+            let showing_img = images[0]
+            let first_img_strc = showing_img.src
+            let image_position_span = document.querySelector(".ClassifiedDetailGallery-marker--position span")
 
-        let count = 0
-        for (let thumbnail_image_div of thumbnail_image_divs) {
-            //disply image when clicked
-            if (count == 0) {
-                thumbnail_image_div.onclick = function() {
-                    showing_img.src = first_img_strc
-                    image_position_span.innerText = "1" + "/" + String(images.length)
+            let count = 0
+            for (let thumbnail_image_div of thumbnail_image_divs) {
+                //disply image when clicked
+                if (count == 0) {
+                    thumbnail_image_div.onclick = function() {
+                        showing_img.src = first_img_strc
+                        image_position_span.innerText = "1" + "/" + String(images.length)
+                    }
+                    thumbnail_image_div.classList.remove("is-active")
+                } else {
+                    thumbnail_image_div.onclick = (function(currentCount) {
+                        return function() {
+                        showing_img.src = images[currentCount].dataset["src"]
+                        image_position_span.innerText = String(currentCount+1) + "/" + String(images.length)
+                        };
+                    })(count);
                 }
-                thumbnail_image_div.classList.remove("is-active")
-            } else {
-                thumbnail_image_div.onclick = (function(currentCount) {
-                    return function() {
-                      showing_img.src = images[currentCount].dataset["src"]
-                      image_position_span.innerText = String(currentCount+1) + "/" + String(images.length)
-                    };
-                  })(count);
+                thumbnail_image_div.attributes.removeNamedItem("href")
+
+                //cursor pointer when hovered
+                thumbnail_image_div.onmouseover = function() {
+                    thumbnail_image_div.style.cursor = "pointer";
+                };
+
+                thumbnail_image_div.onmouseout = function() {
+                    thumbnail_image_div.style.cursor = "auto";
+                };
+
+                count ++
             }
-            thumbnail_image_div.attributes.removeNamedItem("href")
 
-            //cursor pointer when hovered
-            thumbnail_image_div.onmouseover = function() {
-                thumbnail_image_div.style.cursor = "pointer";
-            };
+            //Left right buttons
+            let all_buttons = document.querySelectorAll("button");
+            let buttons_to_delete = [];
+            for (let b of all_buttons) {if (b.title=="Naprej" || b.title=="Nazaj" ) {buttons_to_delete.push(b)}}
 
-            thumbnail_image_div.onmouseout = function() {
-                thumbnail_image_div.style.cursor = "auto";
-            };
-
-            count ++
+            buttons_to_delete[0].parentNode.removeChild(buttons_to_delete[0]);
+            buttons_to_delete[1].parentNode.removeChild(buttons_to_delete[1]);
         }
-
-        //Left right buttons
-        let all_buttons = document.querySelectorAll("button");
-        let buttons_to_delete = [];
-        for (let b of all_buttons) {if (b.title=="Naprej" || b.title=="Nazaj" ) {buttons_to_delete.push(b)}}
-
-        buttons_to_delete[0].parentNode.removeChild(buttons_to_delete[0]);
-        buttons_to_delete[1].parentNode.removeChild(buttons_to_delete[1]);
 
         //Send message to seller
         let send_msg_btns = document.querySelectorAll(".js-veza-contact_seller")
@@ -82,4 +84,4 @@ chrome.runtime.onMessage.addListener((message) => {
         ad_map.parentNode.removeChild(ad_map)
 
     }
-})
+}
