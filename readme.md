@@ -1,13 +1,13 @@
 # Bolha unblur +
-Bolha unblur + extension unblurs bolha inactive Bolha ads. It:
-* unblurs the inactive ad's page
-* allows you to view ad's images and navigate through them
+Bolha unblur + extension unblurs bolha inactive Bolha listings. It:
+* unblurs the inactive listnig page
+* allows you to view listing's images and navigate through them
 * allows you to contact the seller
 
 | Without extension | With extension |
 | - | - |
 | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/7.png) | ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/8.png) |
-| completely blured, can't view images, can't contact seller | unblured page, all images avalible to view, can click on the seller and send them a message |
+| completely blured, can't view images, can't contact seller | unblured page, all images are avalible to view, can click on the seller and send them a message |
 
 # Instalation
 To install extension you first need to downoad the files. Go to code tab and press download zip.
@@ -35,7 +35,7 @@ Go to your browser (I'm using Google Chrome in the explanation, but it will be s
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/3.png)
 
-Then click remove under the BolhaUnblur+ extension.
+Then under the BolhaUnblur+ extension, click remove.
 
 ![image](https://raw.githubusercontent.com/RokKuzner/Bolha-unblur-readme-assets/main/6.png)
 
