@@ -1,5 +1,5 @@
 # Bolha unblur +
-Bolha unblur + extension unblurs bolha inactive Bolha listings. It:
+Bolha unblur + extension unblurs inactive Bolha listings. It:
 * unblurs the inactive listnig page
 * allows you to view listing's images and navigate through them
 * allows you to contact the seller
